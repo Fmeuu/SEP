@@ -35,5 +35,9 @@ public class CapteurImpl implements Capteur {
 		// TODO Auto-generated method stub
 		return strategies;
 	}
+	
+	public void setAlgoDiff(AlgoStrategies algo){
+		this.strategies = algo;
+	}
 
 }

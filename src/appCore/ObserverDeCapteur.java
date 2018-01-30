@@ -5,7 +5,7 @@ package appCore;
 /**
  * The Interface ObserverDeCapteur.
  */
-public interface ObserverDeCapteur {
+public interface ObserverDeCapteur extends Observer<Capteur> {
 
 	/**
 	 * Update.
