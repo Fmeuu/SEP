@@ -7,28 +7,50 @@ import java.util.concurrent.TimeUnit;
 
 import strategy.AlgoStrategies;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Canal.
+ */
 public class Canal implements Capteur, ObserverDeCapteur {
 
+	/** The afficheur. */
 	private Afficheur afficheur;
+	
+	/** The capteur. */
 	private CapteurImpl capteur;
 
+	/**
+	 * Instantiates a new canal.
+	 *
+	 * @param capteur the capteur
+	 * @param afficheur the afficheur
+	 */
 	public Canal (CapteurImpl capteur, Afficheur afficheur){
 		this.capteur = capteur;
 		this.afficheur = afficheur;
 	}
 
+	/* (non-Javadoc)
+	 * @see appCore.Capteur#attach(appCore.Observer)
+	 */
 	@Override
 	public void attach(Observer o) {
 		// TODO Auto-generated method stub
 
 	}
 
+	/* (non-Javadoc)
+	 * @see appCore.Capteur#detach(appCore.Observer)
+	 */
 	@Override
 	public void detach(Observer o) {
 		// TODO Auto-generated method stub
 
 	}
 
+	/* (non-Javadoc)
+	 * @see appCore.Capteur#getValue()
+	 */
 	@Override
 	public int getValue() {
 		ValueCollector getValue = new ValueCollector(this.capteur);
@@ -43,16 +65,25 @@ public class Canal implements Capteur, ObserverDeCapteur {
 		return ret;
 	}
 
+	/* (non-Javadoc)
+	 * @see appCore.Capteur#tick()
+	 */
 	@Override
 	public void tick() {
 
 	}
 
+	/* (non-Javadoc)
+	 * @see appCore.Capteur#getAlgo()
+	 */
 	@Override
 	public AlgoStrategies getAlgo() {
 		return this.capteur.getAlgo();
 	}
 
+	/* (non-Javadoc)
+	 * @see appCore.ObserverDeCapteur#update(appCore.Capteur)
+	 */
 	@Override
 	public void update(Capteur subject) {
 		Update update = new Update(this.afficheur, this);

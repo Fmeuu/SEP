@@ -31,8 +31,13 @@ import java.awt.FlowLayout;
 import javax.swing.JLabel;
 import java.awt.Color;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class App.
+ */
 public class App extends JFrame implements ItemListener{
 
+	/** The content pane. */
 	private JPanel contentPane;
 
 	/** The algo. */
@@ -62,6 +67,8 @@ public class App extends JFrame implements ItemListener{
 
 	/**
 	 * Launch the application.
+	 *
+	 * @param args the arguments
 	 */
 	public static void main(String args[]) {
 		App app = new App();
@@ -98,6 +105,8 @@ public class App extends JFrame implements ItemListener{
 
 	/**
 	 * Create the frame.
+	 *
+	 * @param algo the algo
 	 */
 	public void init(AlgoStrategies algo) {
 		this.setTitle("Projet SEP");
@@ -231,6 +240,11 @@ public class App extends JFrame implements ItemListener{
 		this.setVisible(true);
 	}
 
+	/**
+	 * Item state changed.
+	 *
+	 * @param e the e
+	 */
 	@Override
 	public void itemStateChanged(ItemEvent e) {
 		if (e.getStateChange() == ItemEvent.DESELECTED) {

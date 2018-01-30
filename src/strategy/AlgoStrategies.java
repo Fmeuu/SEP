@@ -11,6 +11,8 @@ public interface AlgoStrategies {
 
 	/**
 	 * Configure.
+	 *
+	 * @param nbCanal the nb canal
 	 */
 	public void configure(int nbCanal);
 	
@@ -33,5 +35,8 @@ public interface AlgoStrategies {
 	 */
 	public void addCanal(Canal canalEntry);
 	
+	/**
+	 * Check waiting.
+	 */
 	public void checkWaiting();
 }
