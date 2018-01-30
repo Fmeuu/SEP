@@ -12,7 +12,7 @@ public interface AlgoStrategies {
 	/**
 	 * Configure.
 	 */
-	public void configure();
+	public void configure(int nbCanal);
 	
 	/**
 	 * Execute.

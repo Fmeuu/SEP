@@ -13,7 +13,7 @@ public class Sequential implements AlgoStrategies {
 	 * @see strategy.AlgoStrategies#configure()
 	 */
 	@Override
-	public void configure() {
+	public void configure(int nbCanal) {
 		// TODO Auto-generated method stub
 
 	}
