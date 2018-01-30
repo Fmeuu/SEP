@@ -45,7 +45,6 @@ public class Canal implements Capteur, ObserverDeCapteur {
 
 	@Override
 	public void tick() {
-		// TODO Auto-generated method stub
 
 	}
 

@@ -54,12 +54,4 @@ public class Atomic implements AlgoStrategies {
 		}
 	}
 
-	public void releaseAll(){
-		this.barrier.reset();
-	}
-	
-	public CyclicBarrier getBarrier() {
-		return this.barrier;
-	}
-
 }
