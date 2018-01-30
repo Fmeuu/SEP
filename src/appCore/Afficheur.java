@@ -1,5 +1,7 @@
 package appCore;
 
+import java.util.concurrent.BrokenBarrierException;
+
 import javax.swing.JLabel;
 
 import strategy.AlgoStrategies;
@@ -21,6 +23,11 @@ public class Afficheur extends JLabel implements ObserverDeCapteur {
 		if(algo instanceof Atomic) {
 			int val = subject.getValue();
 			this.setText(String.valueOf(val));
+			try {
+				((Atomic) subject.getAlgo()).getBarrier().await();
+			} catch (InterruptedException | BrokenBarrierException e) {
+				e.printStackTrace();
+			}
 		}
 		else if (algo instanceof Sequential) {
 		}

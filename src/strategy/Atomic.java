@@ -21,7 +21,7 @@ public class Atomic implements AlgoStrategies {
 
 	@Override
 	public void configure(int nbCanal) {
-		this.barrier = new CyclicBarrier(nbCanal);
+		this.barrier = new CyclicBarrier(nbCanal+1);
 	}
 
 	@Override
@@ -50,6 +50,10 @@ public class Atomic implements AlgoStrategies {
 
 	public void releaseAll(){
 		this.barrier.reset();
+	}
+	
+	public CyclicBarrier getBarrier() {
+		return this.barrier;
 	}
 
 }

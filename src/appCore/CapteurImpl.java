@@ -20,23 +20,21 @@ public class CapteurImpl implements Capteur {
 
 	@Override
 	public int getValue() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+		return compteur;
+		}
 
 	@Override
 	public void tick() {
-		// TODO Auto-generated method stub
-
+		compteur++;
+		this.strategies.execute();
 	}
 
 	@Override
 	public AlgoStrategies getAlgo() {
-		// TODO Auto-generated method stub
-		return strategies;
+		return this.strategies;
 	}
 	
-	public void setAlgoDiff(AlgoStrategies algo){
+	public void setStrategies(AlgoStrategies algo){
 		this.strategies = algo;
 	}
 
