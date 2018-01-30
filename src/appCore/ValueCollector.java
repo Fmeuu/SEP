@@ -10,6 +10,7 @@ public class ValueCollector implements Callable<Integer> {
 	public ValueCollector (CapteurImpl capteur){
 		this.capteur = capteur;
 	}
+	
 	@Override
 	public Integer call() throws Exception {
 		return this.capteur.getValue();	

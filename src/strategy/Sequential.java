@@ -32,5 +32,11 @@ public class Sequential implements AlgoStrategies {
 	public void addCanal(Canal canal) {
 		listCanal.add(canal);
 	}
+	
+	@Override
+	public void checkWaiting() {
+		// TODO Auto-generated method stub
+		return;
+	}
 
 }

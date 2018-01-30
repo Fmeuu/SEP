@@ -30,12 +30,7 @@ public class Atomic implements AlgoStrategies {
 			canal.update(capteur);
 		}
 
-		try {
-			this.barrier.await();
-		} catch (InterruptedException | BrokenBarrierException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		this.checkWaiting();
 	}
 
 	@Override
@@ -46,6 +41,17 @@ public class Atomic implements AlgoStrategies {
 	@Override
 	public void addCanal(Canal canal) {
 		listCanal.add(canal);
+	}
+	
+	@Override
+	public void checkWaiting() {
+		// TODO Auto-generated method stub
+		try {
+			this.barrier.await();
+		} catch (InterruptedException | BrokenBarrierException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	public void releaseAll(){

@@ -37,4 +37,10 @@ public class Epoque implements AlgoStrategies {
 		listCanal.add(canal);
 	}
 
+	@Override
+	public void checkWaiting() {
+		// TODO Auto-generated method stub
+		return;
+	}
+
 }

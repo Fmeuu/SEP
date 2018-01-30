@@ -32,4 +32,6 @@ public interface AlgoStrategies {
 	 * @param canalEntry the canal entry
 	 */
 	public void addCanal(Canal canalEntry);
+	
+	public void checkWaiting();
 }
