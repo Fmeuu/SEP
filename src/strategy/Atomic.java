@@ -41,7 +41,6 @@ public class Atomic implements AlgoStrategies {
 	@Override
 	public void setCapteur(CapteurImpl capteur) {
 		this.capteur = capteur;
-
 	}
 
 	@Override

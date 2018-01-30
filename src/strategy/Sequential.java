@@ -1,48 +1,36 @@
 package strategy;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import appCore.Canal;
+import appCore.Capteur;
 import appCore.CapteurImpl;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class Sequential.
  */
 public class Sequential implements AlgoStrategies {
 
-	/* (non-Javadoc)
-	 * @see strategy.AlgoStrategies#configure()
-	 */
+	private Capteur capteur;
+	private List <Canal> listCanal = new ArrayList<Canal>();
+	
 	@Override
 	public void configure(int nbCanal) {
-		// TODO Auto-generated method stub
-
 	}
 
-	/* (non-Javadoc)
-	 * @see strategy.AlgoStrategies#execute()
-	 */
 	@Override
 	public void execute() {
-		// TODO Auto-generated method stub
-
 	}
 
-	/* (non-Javadoc)
-	 * @see strategy.AlgoStrategies#setCapteur(CapteurImpl)
-	 */
 	@Override
 	public void setCapteur(CapteurImpl capteur) {
-		// TODO Auto-generated method stub
-		
+		this.capteur = capteur;
 	}
 
-	/* (non-Javadoc)
-	 * @see strategy.AlgoStrategies#addCanal(Canal)
-	 */
 	@Override
 	public void addCanal(Canal canal) {
-		// TODO Auto-generated method stub
-		
+		listCanal.add(canal);
 	}
 
 }
