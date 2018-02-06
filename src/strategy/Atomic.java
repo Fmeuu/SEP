@@ -41,7 +41,7 @@ public class Atomic implements AlgoStrategies {
 			canal.update(capteur);
 		}
 
-		this.checkWaiting();
+		this.checkActionToDoBefore();
 	}
 
 	/* (non-Javadoc)
@@ -64,7 +64,7 @@ public class Atomic implements AlgoStrategies {
 	 * @see strategy.AlgoStrategies#checkWaiting()
 	 */
 	@Override
-	public void checkWaiting() {
+	public int checkActionToDoBefore() {
 		// TODO Auto-generated method stub
 		try {
 			this.barrier.await();
@@ -72,6 +72,16 @@ public class Atomic implements AlgoStrategies {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return -1;
+	}
+
+	/* (non-Javadoc)
+	 * @see strategy.AlgoStrategies#checkActionToDoAfter()
+	 */
+	@Override
+	public void checkActionToDoAfter() {
+		// TODO Auto-generated method stub
+		return;
 	}
 
 }

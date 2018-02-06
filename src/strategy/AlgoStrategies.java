@@ -36,7 +36,14 @@ public interface AlgoStrategies {
 	public void addCanal(Canal canalEntry);
 	
 	/**
-	 * Check waiting.
+	 * Check action before.
+	 *
+	 * @return the int
 	 */
-	public void checkWaiting();
+	public int checkActionToDoBefore();
+	
+	/**
+	 * Check action after.
+	 */
+	public void checkActionToDoAfter();
 }

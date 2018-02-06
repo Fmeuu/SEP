@@ -57,7 +57,16 @@ public class Epoque implements AlgoStrategies {
 	 * @see strategy.AlgoStrategies#checkWaiting()
 	 */
 	@Override
-	public void checkWaiting() {
+	public int checkActionToDoBefore() {
+		// TODO Auto-generated method stub
+		return -1;
+	}
+
+	/* (non-Javadoc)
+	 * @see strategy.AlgoStrategies#checkActionToDoAfter()
+	 */
+	@Override
+	public void checkActionToDoAfter() {
 		// TODO Auto-generated method stub
 		return;
 	}
