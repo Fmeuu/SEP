@@ -1,11 +1,16 @@
 package displayAndLauncher;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
+import java.awt.Color;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+import java.awt.event.KeyEvent;
 
+import javax.swing.ButtonGroup;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
+import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
 import appCore.Afficheur;
@@ -15,21 +20,6 @@ import strategy.AlgoStrategies;
 import strategy.Atomic;
 import strategy.Epoque;
 import strategy.Sequential;
-
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.ActionEvent;
-import javax.swing.SwingConstants;
-import javax.swing.ButtonGroup;
-import javax.swing.GroupLayout;
-import javax.swing.GroupLayout.Alignment;
-import java.awt.GridLayout;
-import java.awt.FlowLayout;
-import javax.swing.JLabel;
-import java.awt.Color;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -45,9 +35,6 @@ public class App extends JFrame implements ItemListener{
 
 	/** The capt impl. */
 	private CapteurImpl captImpl;
-
-	/** The value capteur. */
-	private int valueCapteur;
 
 	/** The c 1. */
 	private Canal c1;
@@ -91,7 +78,6 @@ public class App extends JFrame implements ItemListener{
 				this.init(currentAlgo);
 				algoHasChanged = false;
 			}
-			valueCapteur++;
 			captImpl.tick();
 			try {
 				Thread.sleep(500);
